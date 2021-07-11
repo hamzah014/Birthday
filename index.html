@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 
     <style>
+        
+        @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
         @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
@@ -81,6 +85,7 @@ body :-ms-input-placeholder {
   transition-duration: 1s;
   transition-timing-function: ease-in-put;
   font-weight: 200;
+  font-family: 'Indie Flower', cursive !important;
 }
 form {
   padding: 20px 0;
@@ -113,7 +118,7 @@ form input:focus {
   width: 300px;
   color: #53e3a6;
 }
-form button {
+.buttons {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -128,7 +133,7 @@ form button {
   font-size: 18px;
   transition-duration: 0.25s;
 }
-form button:hover {
+.buttons {
   background-color: #f5f7f9;
 }
 .bg-bubbles {
@@ -237,6 +242,14 @@ form button:hover {
   }
 }
 
+.btn-lesgo{
+    letter-spacing: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
     </style>
 
 </head>
@@ -244,12 +257,13 @@ form button:hover {
 
     <div class="wrapper">
         <div class="container">
-            <h1>Welcome</h1>
+            <h1>Welcome to Birthday Party!</h1>
             
             <form class="form">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button type="submit" id="login-button">Login</button>
+                <p>Select your Birthdate :</p><br>
+                <input type="date" id="bdate" placeholder="Birthdate">
+                <br>
+                <a class="btn-lesgo buttons" onclick="lesgo()">LESSGOO!!</a>
             </form>
         </div>
         
@@ -270,12 +284,29 @@ form button:hover {
 </body>
 
 <script>
-     $("#login-button").click(function(event){
-		 event.preventDefault();
-	 
-	 $('form').fadeOut(500);
-	 $('.wrapper').addClass('form-success');
-});
+
+    function lesgo(){
+        //alert("Hellooooo lesgo");
+
+        var birthdate = "1998-07-14";
+
+        var dates = document.getElementById("bdate").value;
+        //alert(dates);
+
+        if(dates==""){
+            alert("Sila masukkan birthdate anda yeeeee cik.");
+        }else if(dates!=birthdate){
+
+            alert("Apaa nii birthday sendiri lupa ;(");
+
+        }else{
+            //alert("samaaaa");
+            alert("Yeayy Welcome to Party!!");
+            window.location.href = "birthday.html"
+        }
+
+    }
+
 </script>
 
 </html>
