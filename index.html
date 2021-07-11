@@ -87,12 +87,12 @@ body :-ms-input-placeholder {
   font-weight: 200;
   font-family: 'Indie Flower', cursive !important;
 }
-form {
+.forms {
   padding: 20px 0;
   position: relative;
   z-index: 2;
 }
-form input {
+.forms input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -110,15 +110,15 @@ form input {
   transition-duration: 0.25s;
   font-weight: 300;
 }
-form input:hover {
+.forms input:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
-form input:focus {
+.forms input:focus {
   background-color: white;
   width: 300px;
   color: #53e3a6;
 }
-form button {
+.forms button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -133,7 +133,7 @@ form button {
   font-size: 18px;
   transition-duration: 0.25s;
 }
-form button{
+.forms button{
   background-color: #f5f7f9;
 }
 .bg-bubbles {
@@ -259,12 +259,12 @@ form button{
         <div class="container">
             <h1>Welcome to Birthday Party!</h1>
             
-            <form class="form">
+            <div class="forms">
                 <p>Select your Birthdate :</p><br>
                 <input type="date" id="bdate" placeholder="Birthdate">
                 <br>
                 <button onclick="lesgo()">LESSGOO!!</button>
-            </form>
+            </div>
         </div>
         
         <ul class="bg-bubbles">
