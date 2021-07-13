@@ -263,9 +263,11 @@ body :-ms-input-placeholder {
                 <p>Select your Birthdate :</p><br>
                 <input type="date" id="bdate" placeholder="Birthdate">
                 <br>
-                <h3>Aiiippp kena tunggu duluuuuuu~~</h3>
+                <button onclick="lesgo()">LESSGOO!!</button>
             </div>
         </div>
+
+        <a id="gogo" href="birthday.html" hidden>go</a>
         
         <ul class="bg-bubbles">
             <li></li>
@@ -286,8 +288,24 @@ body :-ms-input-placeholder {
 <script>
 
     function lesgo(){
-        
-      alert("Mana boleh lagiii, kena tunggu lerrrrrr~~");
+        //alert("Hellooooo lesgo");
+
+        var birthdate = "1998-07-14";
+
+        var dates = document.getElementById("bdate").value;
+        //alert(dates);
+
+        if(dates==""){
+            alert("Sila masukkan birthdate anda yeeeee cik.");
+        }else if(dates!=birthdate){
+
+            alert("Apaa nii birthday sendiri lupa ;(");
+
+        }else{
+            //alert("samaaaa");
+            alert("Yeayy Welcome to Party!!");
+            document.getElementById("gogo").click();
+        }
 
     }
 
